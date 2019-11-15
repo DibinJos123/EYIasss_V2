@@ -532,39 +532,57 @@ input:checked + .slider:before {
 
 				<div class="tree">
 					<ul>
-				  <li>
-					<a href="#" >Parent</a>
+				  <li >
+					<a onclick="heirarchy('BFSI')">BFSI</a>
 					<ul>
 					  <li >
-						<a href="#">Child</a>
+						<a onclick="heirarchy('Banking')">Banking</a>
 						<ul>
 						  <li>
-							<a href="#">Grand Child</a>
-						  </li><li>
-							<a href="#">Grand Child</a>
+							<a onclick="heirarchy('Retail')">Retail</a>
 							<ul>
-							  <li>
-								<a href="#">Grand Child</a>
-							  </li><li>
-								<a href="#">Grand Child</a>
-							  </li>
+								<li>
+									<a onclick="heirarchy('Finance')">Finance</a>
+									<ul>
+										<li>
+											<a onclick="heirarchy('P2P')">P2P</a>
+										</li>
+										<li>
+											<a onclick="heirarchy('S2P')">S2P</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a onclick="heirarchy('NE')">NE</a>
+								</li>
+								<li>
+									<a onclick="heirarchy('OPS')">OPS</a>
+								</li>
 							</ul>
+						  </li>
+						  <li>
+							<a onclick="heirarchy('CC')">CC</a>
+						  </li>
+						  <li>
+							<a onclick="heirarchy('XYZ')">XYZ</a>
 						  </li>
 						</ul>
 					  </li><li>
-						<a href="#">Child</a>
+						<a onclick="heirarchy('Insurance')">Insurance</a>
 						<ul>
 						  <li>
-							<a href="#">Grand Child</a>
-							<ul>
-							  <li>
-								<a href="#">Grand Grand Child</a>
-							  </li>
-							</ul>
-						  </li><li>
-							<a href="#">Grand Child</a>
+							<a onclick="heirarchy('Motor')">Motor</a>
+						  </li>
+						  <li>
+							<a onclick="heirarchy('Life')">Life</a>
+						  </li>
+						  <li>
+							<a onclick="heirarchy('ABCD')">ABCD</a>
 						  </li>
 						</ul>
+					  </li>
+					  <li>
+						  <a onclick="heirarchy('NBFSI')">NBFSI</a>
 					  </li>
 					</ul>
 				  </li>
@@ -652,6 +670,31 @@ input:checked + .slider:before {
 <script src="js/script.js"></script>
 
 <script src="js/industryDiv.js"></script>
+<script>
+	function heirarchy(value) {
+	 switch(value){
+		 case 'BFSI': {
+			 alert('BFSI');
+			 break;}
+
+		 case 'Banking': alert('Banking');break;
+		 case 'Insurance': alert('Insurance');break;
+		 case 'NBFSI': alert('NBFSI');break;
+		 case 'Retail': alert('Retail');break;
+		 case 'Finance': alert('Finance');break;
+		 case 'P2P': alert('P2P');break;
+		 case 'S2P': alert('S2P');break;
+		 case 'NE': alert('NE');break;
+		 case 'OPS': alert('OPS');break;
+		 case 'CC': alert('CC');break;
+		 case 'XYZ': alert('XYZ');break;
+		 case 'Motor': alert('Motor');break;
+		 case 'Life': alert('Life');break;
+		 case 'ABCD': alert('ABCD');break;
+		 case 'P2P': alert( "KYC Document Digitisation")
+	 }
+	}
+	</script>
 
 </body>
 
