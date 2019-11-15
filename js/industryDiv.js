@@ -16,13 +16,16 @@ jQuery(function ($) {
     //    $(this).val("play");
     //   play_pause();
     // }
+    var j=0
     if(document.getElementById("industryTreeView").style.display == "" || document.getElementById("industryTreeView").style.display == 'inline')
     {
     document.getElementById("industryTreeView").style.display = "none";
+    document.getElementById("portfolio").style.display = "";
     }
     else if(document.getElementById("industryTreeView").style.display == "none")
     {
       document.getElementById("industryTreeView").style.display = "";
+      document.getElementById("portfolio").style.display = "none";
     }
  });
 
