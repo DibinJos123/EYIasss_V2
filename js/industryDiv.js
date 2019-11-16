@@ -7,6 +7,8 @@ jQuery(function ($) {
 
   $('#industryToggle').click(function() {
 
+
+
     console.log("Industry Toggle")
     // if ($(this).val() == "play") {
     //    $(this).val("pause");
@@ -24,9 +26,14 @@ jQuery(function ($) {
     }
     else if(document.getElementById("industryTreeView").style.display == "none")
     {
+      $("#industryTreeView").fadeIn(3000);
       document.getElementById("industryTreeView").style.display = "";
       document.getElementById("portfolio").style.display = "none";
     }
+
+ 
+  
+
  });
 
 });
