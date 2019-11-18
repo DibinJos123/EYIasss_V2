@@ -21,7 +21,7 @@ var treeData = {
         ]
       },
       {
-        name: "B",
+        name: "TMT",
         children: [
           { name: "A1" },
           { name: "A2" },
@@ -39,9 +39,9 @@ var treeData = {
           }
         ]
       },
-      { name: "Z" },
+      { name: "AME" },
       {
-        name: "B",
+        name: "GPS",
         children: [{ name: "B1" }, { name: "B2" }, { name: "B3" }]
       }
     ],
@@ -142,9 +142,10 @@ var treeData = {
         }
         return "rgb(39, 43, 77)";
       })
-      .attr("dy", ".90em")
+      .style("font-weight", "bold")
+      .attr("dy", "1.0em")
       .attr("x", function(d) {
-        return d.parent ? 45 : 40;
+        return d.parent ? 45 : 43;
       })
       .attr("text-anchor", function(d) {
         return "middle";
