@@ -18,7 +18,6 @@ jQuery(function ($) {
     //    $(this).val("play");
     //   play_pause();
     // }
-    var j=0
     if(document.getElementById("industryTreeView").style.display == "" || document.getElementById("industryTreeView").style.display == 'inline')
     {
     document.getElementById("industryTreeView").style.display = "none";

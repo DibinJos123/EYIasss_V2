@@ -3320,3 +3320,25 @@ a.close-styler {
       box-shadow: 0 0 0 0 rgba(204,169,44, 0);
   }
 }
+
+
+/* Collapsible tree styling */
+
+
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: rgb(55, 68, 105);
+  stroke-width: 1px;
+}
+
