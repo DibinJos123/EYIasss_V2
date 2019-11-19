@@ -102,15 +102,21 @@ var treeData = {
       .attr("r", 1e-6)
       .style("fill", function(d) {
         return d.parent ? "rgb(39, 43, 77)" : "#ffc400";
-      });
+      })
+      .style("fill", function(d) {
+        return d.children || d._children
+        ? "#ffc400"
+        : "rgb(39, 43, 77)";
+      })
+    
     nodeEnter
       .append("rect")
       .attr("rx", function(d) {
-        if (d.parent) return d.children || d._children ? 0 : 15;
+        if (d.parent) return d.children || d._children ? 15 : 15;
         return 10;
       })
       .attr("ry", function(d) {
-        if (d.parent) return d.children || d._children ? 0 : 50;
+        if (d.parent) return d.children || d._children ? 50 : 50;
         return 10;
       })
       .attr("stroke-width", function(d) {
@@ -118,9 +124,14 @@ var treeData = {
       })
       .attr("stroke", function(d) {
         return d.children || d._children
-          ? "rgb(3, 192, 220)"
+          ? "#ffc400"
           : "rgb(38, 222, 176)";
       })
+      // .attr("fill", function(d) {
+      //   return d.children || d._children
+      //     ? "#ffc400"
+      //     : "rgb(3, 192, 220) ";
+      // })
       .attr("stroke-dasharray", function(d) {
         return d.children || d._children ? "0" : "2.2";
       })
@@ -138,7 +149,7 @@ var treeData = {
       .append("text")
       .style("fill", function(d) {
         if (d.parent) {
-          return d.children || d._children ? "#ffffff" : "rgb(38, 222, 176)";
+          return d.children || d._children ? "#000000" : "#ffffff";
         }
         return "rgb(39, 43, 77)";
       })
